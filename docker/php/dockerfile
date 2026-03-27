@@ -1,0 +1,31 @@
+FROM php:8.2-apache
+
+RUN apt-get update && apt-get install -y \
+    zip \
+    unzip \
+    git \
+    curl \
+    libonig-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Only install what we need RIGHT NOW
+# pdo_mysql = database connection
+# mbstring  = safe string handling
+RUN docker-php-ext-install pdo_mysql mbstring
+
+# Enable clean URLs
+RUN a2enmod rewrite
+
+# Allow .htaccess files
+RUN sed -i 's/AllowOverride None/AllowOverride All/g' \
+    /etc/apache2/apache2.conf
+
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
+WORKDIR /var/www/html
+
+# Apache serves only from /public folder
+RUN sed -i 's|/var/www/html|/var/www/html/public|g' \
+    /etc/apache2/sites-available/000-default.conf

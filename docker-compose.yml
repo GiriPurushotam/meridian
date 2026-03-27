@@ -1,0 +1,78 @@
+version: '3.9'
+
+services:
+
+  # -------------------------------------------------------
+  # PHP + Apache web server
+  # We use a custom Dockerfile so we can install extensions
+  # -------------------------------------------------------
+  app:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: meridian_app
+    restart: unless-stopped
+    ports:
+      - "8080:80"          # Visit site at http://localhost:8080
+    volumes:
+      - ./src:/var/www/html # code folder maps into Apache's web root
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+    networks:
+      - meridian_network
+
+  # -------------------------------------------------------
+  # MySQL 8 database
+  # -------------------------------------------------------
+  db:
+    image: mysql:8.0
+    container_name: meridian_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
+    volumes:
+      - meridian_db_data:/var/lib/mysql        # Persistent data (survives restarts)
+      - ./mysql/init:/docker-entrypoint-initdb.d # SQL files auto-run on first boot
+    ports:
+      - "3307:3306"        # 3307 avoids conflict if you have local MySQL installed
+    networks:
+      - meridian_network
+
+  # -------------------------------------------------------
+  # phpMyAdmin — visual database manager
+  # -------------------------------------------------------
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: meridian_pma
+    restart: unless-stopped
+    ports:
+      - "8081:80"          # Visit phpMyAdmin at http://localhost:8081
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
+    depends_on:
+      - db
+    networks:
+      - meridian_network
+
+# -------------------------------------------------------
+# Named volume — MySQL data persists even if container stops
+# -------------------------------------------------------
+volumes:
+  meridian_db_data:
+
+# -------------------------------------------------------
+# All containers talk to each other on this private network
+# -------------------------------------------------------
+networks:
+  meridian_network:
+    driver: bridge
