@@ -1,0 +1,17 @@
+.env
+vendor/
+node_mudeles/
+
+#os garbage
+.DS_Store
+Thumbs.db
+
+#ide files
+.vscode/
+.idea/
+
+#uploaded files (client uploads- not part of codebase)
+src/public/assets/images/uploads/
+
+#MySQL data
+mysql/data
