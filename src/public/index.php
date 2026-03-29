@@ -1,3 +1,9 @@
 <?php
 
-echo '<h1 style="font-family:sans-serif;color:#1A56A0;"> Meridian Docker environment is running. </h1>';
+declare(strict_types=1);
+
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../config/config.php';
+
+
+echo APP_ENV === 'production' ? 'config loaded' : 'Dev Mode';
