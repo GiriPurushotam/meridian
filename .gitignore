@@ -1,6 +1,6 @@
 .env
-vendor/
-node_mudeles/
+src/vendor/
+node_modules/
 
 #os garbage
 .DS_Store
