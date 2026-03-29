@@ -1,0 +1,17 @@
+{
+  "name": "meridian/fms",
+  "description": "Medirian Facility Management Services website",
+  "type": "project",
+  "require": {
+    "php": "^8.2",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Meridian\\": "src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}
