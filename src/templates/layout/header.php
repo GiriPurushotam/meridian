@@ -45,7 +45,7 @@
             <!-- ── Logo ──────────────────────────────────────── -->
 
             <a class="navbar-brand d-flex align-items-center gap-2" href="/">
-                <img src="/assets/images/logo.png"
+                <img src="/assets/images/logos.png"
                     alt="Meridian FMS Logo"
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
                 <span style="display:none;">
