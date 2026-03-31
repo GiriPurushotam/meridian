@@ -1,0 +1,257 @@
+/* =============
+    Meridian FMS -- main.css
+    Brand styles layered on top of bootstrap 5
+   ============= */
+
+   /* 1. CSS custom properties (Brand Tokens)
+     Change a color once here and it updates everywhere.
+     --------------------- */
+
+
+     :root {
+        --clr-navy: #1B3A5C;
+        --clr-blue: #1A56A0;
+        --clr-green: #5A9E2F;
+        --clr-white: #FFFFFF;
+        --clr-light: #F4F7FB;
+        --clr-text: #2D2D2D;
+        --clr-muted: #6B7280;
+
+
+        --font-heading: 'Playfair Display', serif;
+        --font-body: 'DM Sans', sans-serif;
+
+        --shadow-card: 0 4px 20px rgba(27, 58, 92, 0.10);
+        --radius-card: 10px;
+        --transition: all 0.25s ease;
+     }
+
+     /* 2. Base ------------------------------------- */
+
+     *, *::before, *::after { box-sizing: border-box;}
+
+     html { scroll-behavior: smooth;}
+
+     body {
+        font-family: var(--font-body);
+        color: var(--clr-text);
+        background: var(--clr-white);
+        line-height: 1.65;
+        font-size: 1rem;
+     }
+
+     h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        color: var(--clr-navy);
+        line-height: 1.25;
+     }
+
+     a {
+        color: var(--clr-blue);
+        text-decoration: none;
+        transition: var(--transition);
+     }
+
+     a:hover {
+        color: var(--clr-navy);
+     }
+
+     img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+     }
+
+     /* 3.Utility helpers ------------------------------ */
+
+     .text-green {color: var(--clr-green) !important;}
+     .text-navy {color: var(--clr-navy) !important;}
+     .text-blue {color: var(--clr-blue) !important;}
+     .bg-navy {background-color: var(--clr-navy) !important;}
+     .bg-blue {background-color: var(--clr-blue) !important;}
+     .bg-green {background-color: var(--clr-green) !important;}
+     .bg-light-brand {background-color: var(--clr-light) !important;}
+
+
+ .section.label {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: var(--clr-green);
+    margin-bottom: 0.5rem;
+    display: block;
+ }
+
+
+ .section.title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-family: var(--font-heading);
+    color: var(--clr-navy);
+    margin-bottom: 1rem;
+ }
+
+ .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--clr-muted);
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+ }
+
+ /* 4.Buttons ------------------------------------------ */
+
+ .btn-brand-primary {
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    border: 2px solid var(--clr-green);
+    padding: 0.6rem 1.8rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+ }
+
+ .btn-brand-primary:hover {
+    background-color: #4a8926;
+    border-color: #4a8926;
+    color: var(--clr-white);
+ }
+
+ .btn-brand-outline {
+    background-color: transparent;
+    color: var(--clr-white);
+    border: 2px solid var(--clr-white);
+    padding: 0.6rem 1.8rem;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+ }
+
+ .btn-brand-outline:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-navy);
+ }
+
+ /* 5.Navbar --------------------------------------- */
+
+ #main-navbar {
+    background-color: var(--clr-navy);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    transition: box-shadow 0.3s ease;
+ }
+
+ #main-navbar.scrolled {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+ }
+ 
+ #main-navbar .navbar-brand img {
+    height: 52px;
+    width: auto;
+ }
+
+ #main-navbar .navbar-brand span {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--clr-white);
+    line-height: 1.1;
+ }
+
+ #main-navbar .nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    padding: 0.4rem 0.9rem !important;
+    border-radius: 4px;
+    transition: var(--transition);
+ }
+
+ #main-navbar .nav-link:hover, #main-navbar .nav-link:active {
+    color: var(--clr-white) !important;
+    background-color: rgba(255,255,255,0.01);
+ }
+
+ #main-navbar .navbar-toggler {
+    border-color: rgba(255,255,255,0.3);
+ }
+
+ #main-navbar .navbar-toggler-icon {
+    filter: invert(1);
+ }
+
+ #main-navbar .nav-cta {
+    background-color: var(--clr-green);
+    color: var(--clr-white) !important;
+    border-radius: 6px;
+    padding: 0.4rem 1.1rem !important;
+    font-weight: 700;
+ }
+
+ #main-navbar .nav-cta:hover {
+    background-color: #556e47;
+ }
+
+ 
+
+ /* 11.Footer ---------------------------------------- */
+
+ #main-footer {
+    background-color: #101f30;
+    color: rgba(255,255,255,0.7);
+    padding: 3.5rem 0 1.5rem;
+    font-size: 0.88rem;
+ }
+
+ #main-footer h5 {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-green);
+    margin-bottom: 1rem;
+ }
+
+ #main-footer a {
+    color: rgba(255,255,255,0.68);
+    display: block;
+    margin-bottom: 0.35rem;
+ }
+
+ #main-footer a:hover {
+    color: var(--clr-white);
+ }
+
+ .footer-divider {
+    border-color: rgba(255,255,255,0.1);
+    margin: 2rem 0 1rem;
+ }
+
+ .footer-bottom {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+ }
+
+
+
+ /* ── 12. Scroll-reveal animation ─────────────────────────────
+   Elements start hidden and fade up. JS triggers .visible.
+   ----------------------------------------------------------- */
+ .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+ }
+
+ .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+ }
+
+
+
