@@ -196,7 +196,7 @@
     background-color: #556e47;
  }
 
- /* 6. Hero section ---------------------------------- */
+ /* 6. hero section ---------------------------------- */
 
  #hero-carousel {
    background-color: #4a8926;
@@ -301,7 +301,7 @@
     .hero-caption .tagline { font-size: 0.9rem; }
 }
 
-/* 7. Why choose us section -------------------------- */
+/* 7. why choose us section -------------------------- */
 
 #why-choose-us {
    padding: 5rem 0;
@@ -364,7 +364,7 @@
    #why-choose-us {pad: 3rem 0;}
 }
 
-/* 8.Services section --------------------------------- */
+/* 8.services section --------------------------------- */
 
 #services {
    padding: 5rem 0;
@@ -440,7 +440,56 @@
 }
 
 
- /* 11.Footer ---------------------------------------- */
+/* 9.about-snippet section ---------------------------------- */
+
+#about-snippet {
+   padding: 5rem;
+   background-color: var(--clr-navy);
+   position: relative;
+   overflow: hidden;
+}
+
+#about-snippet::before {
+   content: '';
+   position: absolute;
+   top: -80px;
+   right: -80px;
+   width: 320px;
+   height: 320px;
+   border-radius: 50%;
+   background: rgba(255,255,255,0.04);
+   pointer-events: none;
+}
+
+#about-snippet::after {
+   content: '';
+   position: absolute;
+   bottom: -60px;
+   left: 10%;
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   background: rgba(90,158,47,0.08);
+   pointer-events: none;
+}
+
+#about-snippet h2 {
+   color: var(--clr-white);
+}
+
+#about-snippet p {
+   color: rgba(255,255,255,0.78);
+
+}
+
+
+@media (max-width: 767px) {
+    #about-snippet { padding: 3rem 0; }
+}
+
+
+
+ /* 11.footer ---------------------------------------- */
 
  #main-footer {
     background-color: #101f30;
