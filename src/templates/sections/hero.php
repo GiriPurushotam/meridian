@@ -67,7 +67,7 @@ if (empty($banners)) {
                         <p class="tagline">&ldquo;We Bring Back The Shine&rdquo;</p>
                         <div class="d-flex flex-wrap gap-3">
                             <a href="/contact" class="btn-brand-primary">Get a Free Quote</a>
-                            <a href="/services" class="btn-brand-outline">Our Services</a>
+                            <a href="/services.php" class="btn-brand-outline">Our Services</a>
                         </div>
                     </div>
 
