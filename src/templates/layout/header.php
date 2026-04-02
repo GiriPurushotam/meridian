@@ -75,18 +75,18 @@
 
                     <li class="nav-item">
                         <a class="nav-link <?= ($activePage ?? '') === 'services' ? 'active' : '' ?>"
-                            href="/services">Services</a>
+                            href="/services.php">Services</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link <?= ($activePage ?? '') === 'about' ? 'active' : '' ?>"
-                            href="/about">About</a>
+                            href="/about.php">About</a>
                     </li>
 
                     <!-- Contact is a CTA button — stands out from plain links -->
                     <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
                         <a class="nav-link nav-cta <?= ($activePage ?? '') === 'contact' ? 'active' : '' ?>"
-                            href="/contact">Get a Quote</a>
+                            href="/contact.php">Get a Quote</a>
                     </li>
 
                 </ul>
