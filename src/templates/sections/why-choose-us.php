@@ -84,30 +84,24 @@
             <div class="col-12 col-lg-5 reveal">
                 <div class="row g-2">
 
-                    <!-- Top row: first two photos side by side -->
-
-                    <div class="col-6">
+                    <div class="col-4">
                         <img src="/assets/images/staff-1.jpg"
-                            alt="Cleaning Bathroom Professionally"
-                            class="staff-photo"
-                            onerror="this.src=''; this.style.background='linear-gradient(180deg,#1B3A5C,#1A56A0)'; this.alt=''">
+                            alt="Cleaning bathroom professionally"
+                            class="staff-photo">
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
                         <img src="/assets/images/staff-2.jpg"
                             alt="Window cleaning service"
-                            class="staff-photo"
-                            onerror="this.src=''; this.style.background='linear-gradient(180deg,#1A56A0,#5A9E2F)'; this.alt=''">
+                            class="staff-photo">
                     </div>
-                    <!-- Bottom row: third photo full width -->
-                    <div class="col-12">
+                    <div class="col-4">
                         <img src="/assets/images/staff-3.jpg"
                             alt="Vacuuming commercial space"
-                            class="staff-photo"
-                            style="height:200px;"
-                            onerror="this.src=''; this.style.background='linear-gradient(180deg,#5A9E2F,#1B3A5C)'; this.alt=''">
+                            class="staff-photo">
                     </div>
-                </div><!-- End: row photos -->
-            </div><!-- End: Col right -->
+
+                </div>
+            </div>
         </div><!-- End: row main -->
     </div><!-- End: container -->
 </section>
