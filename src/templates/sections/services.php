@@ -6,7 +6,7 @@ if (empty($services)) {
             'title'        => 'Office Cleaning',
             'slug'         => 'office',
             'description'  => 'Create a pristine, professional workspace with our premium office cleaning services. We deliver meticulous attention to detail, ensuring a hygienic, organised, and welcoming environment that enhances productivity.',
-            'image'        => 'staff-2.jpg',
+            'image'        => 'hero-banner.png',
             'icon'         => 'bi-building',
         ],
 
@@ -107,7 +107,7 @@ if (empty($services)) {
         <!-- Bottom CTA -->
 
         <div class="text-center mt-5 reveal">
-            <a href="/services.php" class="btn-brand-primary" style="display:inline-block;">
+            <a href="/services" class="btn-brand-primary" style="display:inline-block;">
                 View All Services <i class="bi bi-arrow-right ms-2"></i>
             </a>
         </div>
