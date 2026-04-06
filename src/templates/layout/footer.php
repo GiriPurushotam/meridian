@@ -6,9 +6,9 @@
 
             <!-- Col 1: Brand + tagline -->
             <div class="col-12 col-md-4">
-                <img src="/assets/images/logo.png"
-                    alt="Meridian FMS Logo"
-                    style="height:48px; margin-bottom:0.75rem;"
+                <img src="/assets/images/logo-footer.png"
+                    alt="Meridian FMS"
+                    style="height:60px; mix-blend-mode:screen; margin-bottom:0.75rem;"
                     onerror="this.style.display='none'">
                 <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6;">
                     Professional cleaning and facility management

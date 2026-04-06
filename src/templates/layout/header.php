@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <!-- Favicon placeholder — replace with real icon later -->
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="icon" type="image/png" href="/assets/images/logo-nav.png">
 </head>
 
 <body>
@@ -45,8 +45,8 @@
             <!-- ── Logo ──────────────────────────────────────── -->
 
             <a class="navbar-brand d-flex align-items-center gap-2" href="/">
-                <img src="/assets/images/logos.png"
-                    alt="Meridian FMS Logo"
+                <img src="/assets/images/logo-nav.png"
+                    alt="Meridian FMS"
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
                 <span style="display:none;">
                     <span class="text-white fw-bold">MERIDIAN</span><br>
@@ -75,18 +75,18 @@
 
                     <li class="nav-item">
                         <a class="nav-link <?= ($activePage ?? '') === 'services' ? 'active' : '' ?>"
-                            href="/services.php">Services</a>
+                            href="/services">Services</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link <?= ($activePage ?? '') === 'about' ? 'active' : '' ?>"
-                            href="/about.php">About</a>
+                            href="/about">About</a>
                     </li>
 
                     <!-- Contact is a CTA button — stands out from plain links -->
                     <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
                         <a class="nav-link nav-cta <?= ($activePage ?? '') === 'contact' ? 'active' : '' ?>"
-                            href="/contact.php">Get a Quote</a>
+                            href="/contact">Get a Quote</a>
                     </li>
 
                 </ul>
