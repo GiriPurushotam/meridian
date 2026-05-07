@@ -4,8 +4,13 @@
 
             <!-- Left-text --------------------------------- | -->
             <div class="col-12 col-lg-7 reveal">
-                <span class="section-label">About Us</span>
-                <h2 class="section-title" style="color: var(--clr-white);">Reliable Cleaning You Can <br> Count On</h2>
+                <span style="font-family:var(--font-body); font-size:0.8rem; font-weight:700;
+             letter-spacing:0.15em; text-transform:uppercase;
+             color:#5A9E2F; display:block; margin-bottom:0.6rem;">About Us</span>
+                <h2 style="font-family:var(--font-heading); color:#FFFFFF;
+           font-size:clamp(2rem, 4vw, 2.8rem); line-height:1.2; margin-bottom:1.2rem;">
+                    Reliable Cleaning You Can<br>Count On
+                </h2>
                 <p>
                     Meridian Facility Management Services provides professional cleaning
                     and facility maintenance solutions for commercial, industrial, and

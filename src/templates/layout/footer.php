@@ -6,7 +6,7 @@
 
             <!-- Col 1: Brand + tagline -->
             <div class="col-12 col-md-4">
-                <img src="/assets/images/logo-footer.png"
+                <img src="/assets/images/logo-full.png"
                     alt="Meridian FMS"
                     style="height:60px; mix-blend-mode:screen; margin-bottom:0.75rem;"
                     onerror="this.style.display='none'">
@@ -43,7 +43,7 @@
 
                 <p class="mb-1">
                     <i class="bi bi-telephone-fill me-2 text-green"></i>
-                    <a href="tel:0416969845">0416 969 845</a>
+                    <a href="tel:+61494632063">+61 494 632 063</a>
                 </p>
 
                 <p class="mb-1">

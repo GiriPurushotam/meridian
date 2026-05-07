@@ -9,9 +9,9 @@
 
             <!-- Quick contact details inline -->
             <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 mt-3">
-                <a href="tel:0416969845"
+                <a href="tel:+61494632063"
                     style="color:rgba(255,255,255,0.9); font-weight:600; font-size:1rem;">
-                    <i class="bi bi-telephone-fill me-2"></i>0416 969 845
+                    <i class="bi bi-telephone-fill me-2"></i>+61 494 632 063
                 </a>
                 <a href="mailto:Operations@meridianfms.com.au"
                     style="color:rgba(255,255,255,0.9); font-weight:600; font-size:1rem;">

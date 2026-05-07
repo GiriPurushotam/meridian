@@ -9,22 +9,21 @@
 
 
      :root {
-        --clr-navy: #1B3A5C;
-        --clr-blue: #1A56A0;
-        --clr-green: #5A9E2F;
-        --clr-white: #FFFFFF;
-        --clr-light: #F4F7FB;
-        --clr-text: #2D2D2D;
-        --clr-muted: #6B7280;
+    --clr-navy:   #003D7A;
+    --clr-blue:   #00529B;
+    --clr-green:  #94B730;
+    --clr-white:  #FFFFFF;
+    --clr-light:  #F0F7FF;
+    --clr-text:   #1A2E4A;
+    --clr-muted:  #5A6A80;
 
+    --font-heading: 'Playfair Display', serif;
+    --font-body:    'DM Sans', sans-serif;
 
-        --font-heading: 'Playfair Display', serif;
-        --font-body: 'DM Sans', sans-serif;
-
-        --shadow-card: 0 4px 20px rgba(27, 58, 92, 0.10);
-        --radius-card: 10px;
-        --transition: all 0.25s ease;
-     }
+    --shadow-card: 0 4px 20px rgba(0, 82, 155, 0.10);
+    --radius-card: 10px;
+    --transition:  all 0.25s ease;
+}
 
      /* 2. Base ------------------------------------- */
 
@@ -139,7 +138,7 @@
  /* 5.Navbar --------------------------------------- */
 
  #main-navbar {
-    background-color: var(--clr-navy);
+    background-color: var(--clr-blue);
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     transition: box-shadow 0.3s ease;
@@ -150,7 +149,7 @@
  }
  
  #main-navbar .navbar-brand img {
-    height: 52px;
+    height: 56px;
     width: auto;
     object-fit: contain;
     object-position: top center;
@@ -209,9 +208,9 @@
 
  .hero-slide-img {
    width: 100%;
-   height: 600px;
+   height: auto;
    object-fit: cover;
-   object-position: center;
+   object-position: center top;
    display: block;
  }
 
@@ -237,7 +236,7 @@
 
 /* Mobile hero */
 @media (max-width: 767px) {
-    .hero-slide-img { height: 260px; }
+    .hero-slide-img { min-height: 260px; }
 }
 
 /* 7. why choose us section -------------------------- */
@@ -383,7 +382,7 @@
 
 #about-snippet {
    padding: 5rem;
-   background-color: var(--clr-navy);
+   background-color: var(--clr-blue);
    position: relative;
    overflow: hidden;
 }
@@ -429,7 +428,7 @@
 /* ── 10. Contact CTA Strip ------------------------- */
 #contact-cta {
     padding: 4rem 0;
-    background: linear-gradient(135deg, var(--clr-blue) 0%, var(--clr-green) 100%);
+    background: linear-gradient(135deg, var(--clr-blue) 0%, #006AC0 100%);
     text-align: center;
 }
 
@@ -449,7 +448,7 @@
  /* 11.footer ---------------------------------------- */
 
  #main-footer {
-    background-color: #101f30;
+    background-color: #002D5C;
     color: rgba(255,255,255,0.7);
     padding: 3.5rem 0 1.5rem;
     font-size: 0.88rem;

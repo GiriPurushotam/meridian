@@ -18,19 +18,19 @@ if (empty($banners)) {
             'alt_text' => 'Meridian FMS professional cleaning team',
         ],
         [
-            'filename' => 'hero-2.jpg',
+            'filename' => 'hero-2.png',
             'alt_text' => 'Professional office cleaning services',
         ],
         [
-            'filename' => 'hero-3.jpg',
+            'filename' => 'hero-3.png',
             'alt_text' => 'Commercial gym cleaning',
         ],
         [
-            'filename' => 'hero-4.jpg',
+            'filename' => 'hero-4.png',
             'alt_text' => 'Restaurant and hospitality cleaning',
         ],
         [
-            'filename' => 'hero-5.jpg',
+            'filename' => 'hero-5.png',
             'alt_text' => 'School and childcare facility cleaning',
         ],
     ];
@@ -69,7 +69,7 @@ if (empty($banners)) {
 
                     <!-- Colour fallback when image missing -->
                     <div class="hero-slide-img"
-                        style="display:none; background:linear-gradient(135deg, #1B3A5C 0%, #1A56A0 100%);">
+                        style="display:none; min-height:500px; background:linear-gradient(135deg, #1B3A5C 0%, #1A56A0 100%);">
                     </div>
 
                 </div>

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <!-- Favicon placeholder — replace with real icon later -->
-    <link rel="icon" type="image/png" href="/assets/images/logo-nav.png">
+    <link rel="icon" type="image/png" href="/assets/images/logo-icon.png">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
             <!-- ── Logo ──────────────────────────────────────── -->
 
             <a class="navbar-brand d-flex align-items-center gap-2" href="/">
-                <img src="/assets/images/logo-nav.png"
+                <img src="/assets/images/logo-icon.png"
                     alt="Meridian FMS"
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
                 <span style="display:none;">

@@ -29,4 +29,4 @@ define('MAIL_NAME', env('MAIL_NAME', 'Meridian FMS'));
 
 //App
 define('APP_ENV', env('APP_ENV', 'production'));
-define('APP_DEBUG', env('APP_DEBUF', 'false') === 'true');
+define('APP_DEBUG', env('APP_DEBUG', 'false') === 'true');
