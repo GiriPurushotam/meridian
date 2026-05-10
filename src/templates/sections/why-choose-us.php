@@ -85,17 +85,17 @@
                 <div class="row g-2">
 
                     <div class="col-4">
-                        <img src="/assets/images/staff-1.jpg"
+                        <img src="/assets/images/washroom.jpeg"
                             alt="Cleaning bathroom professionally"
                             class="staff-photo">
                     </div>
                     <div class="col-4">
-                        <img src="/assets/images/staff-2.jpg"
+                        <img src="/assets/images/sink.jpeg"
                             alt="Window cleaning service"
                             class="staff-photo">
                     </div>
                     <div class="col-4">
-                        <img src="/assets/images/staff-3.jpg"
+                        <img src="/assets/images/floors.jpeg"
                             alt="Vacuuming commercial space"
                             class="staff-photo">
                     </div>

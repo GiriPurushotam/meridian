@@ -6,7 +6,7 @@ if (empty($services)) {
             'title'        => 'Office Cleaning',
             'slug'         => 'office',
             'description'  => 'Create a pristine, professional workspace with our premium office cleaning services. We deliver meticulous attention to detail, ensuring a hygienic, organised, and welcoming environment that enhances productivity.',
-            'image'        => 'hero-banner.png',
+            'image'        => 'service-banner2.png',
             'icon'         => 'bi-building',
         ],
 
@@ -15,7 +15,7 @@ if (empty($services)) {
             'slug'         => 'gym',
             'description'  => 'Maintain a spotless and sanitary fitness environment with our specialised gym cleaning solutions. From equipment and training zones to locker rooms and high-touch surfaces, we protect member health.',
 
-            'image'        => 'service-gym.jpg',
+            'image'        => 'service-gym.png',
             'icon'         => 'bi-bicycle',
         ],
 
@@ -23,35 +23,35 @@ if (empty($services)) {
             'title'       => 'Restaurant &amp; Pub Cleaning',
             'slug'        => 'restaurant',
             'description' => 'Deliver an exceptional dining experience with our comprehensive restaurant and pub cleaning services. We uphold the highest hygiene standards across dining areas, kitchens, bars, and restrooms.',
-            'image'       => 'service-restaurant.jpg',
+            'image'       => 'service-pubs.png',
             'icon'        => 'bi-cup-hot',
         ],
         [
             'title'       => 'School &amp; Childcare Cleaning',
             'slug'        => 'school',
             'description' => 'Provide children and educators with a safe, healthy learning environment. We use child-safe practices to maintain spotless classrooms, play areas, and facilities where wellbeing comes first.',
-            'image'       => 'service-school.jpg',
+            'image'       => 'service-childcares.png',
             'icon'        => 'bi-mortarboard',
         ],
         [
             'title'       => 'Retail Store Cleaning',
             'slug'        => 'retail',
             'description' => 'Enhance your customers\' shopping experience with beautifully maintained retail spaces. Our expert cleaning keeps floors gleaming, displays dust-free, and stores fresh and inviting.',
-            'image'       => 'service-retail.jpg',
+            'image'       => 'service-retail.png',
             'icon'        => 'bi-shop',
         ],
         [
             'title'       => 'Public Area Cleaning',
             'slug'        => 'public',
             'description' => 'Make strong first impressions with professionally maintained public spaces. We ensure lobbies, corridors, and shared facilities remain immaculate, hygienic, and welcoming.',
-            'image'       => 'service-public.jpg',
+            'image'       => 'service-public.png',
             'icon'        => 'bi-people',
         ],
         [
             'title'       => 'Other Services',
             'slug'        => 'other',
             'description' => 'Need something specific? We provide tailored commercial and industrial cleaning solutions designed around your unique requirements, schedules, and compliance needs.',
-            'image'       => 'service-other.jpg',
+            'image'       => 'service-final.png',
             'icon'        => 'bi-stars',
         ],
     ];

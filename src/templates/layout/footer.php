@@ -13,7 +13,7 @@
                 <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6;">
                     Professional cleaning and facility management
                     across South East Queensland.<br>
-                    <em style="color:rgba(255,255,255,0.45);">We Bring Back The Shine.</em>
+                    <em style="color:rgba(71, 211, 15, 0.92);">We Bring Back The Shine.</em>
                 </p>
             </div>
 

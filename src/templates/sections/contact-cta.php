@@ -20,24 +20,7 @@
             </div>
         </div>
         <!-- ── Right: CTA button ───────────────────────── -->
-        <div class="col-12 col-lg-5 text-center reveal">
-            <a href="/contact"
-                style="display:inline-block;
-                          background:var(--clr-white);
-                          color:var(--clr-navy);
-                          padding:0.85rem 2.5rem;
-                          border-radius:8px;
-                          font-weight:700;
-                          font-size:1rem;
-                          letter-spacing:0.02em;
-                          box-shadow:0 4px 20px rgba(0,0,0,0.15);
-                          transition:all 0.25s ease;"
-                onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 28px rgba(0,0,0,0.2)';"
-                onmouseout="this.style.transform=''; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.15)';">
-                <i class="bi bi-chat-dots-fill me-2" style="color:var(--clr-green);"></i>
-                Get a Free Quote
-            </a>
-        </div>
+
 
     </div><!-- End-row -->
     </div><!-- End-container -->
