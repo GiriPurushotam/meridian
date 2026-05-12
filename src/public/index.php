@@ -5,9 +5,27 @@ declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../config/config.php';
 
-$pageTitle = 'Home';
+use Meridian\Content\BannerRepository;
+use Meridian\Content\ServiceRepository;
+use Meridian\Content\SettingRepository;
+
+$pageTitle  = 'Home';
 $activePage = 'home';
 
+$banners    = (new BannerRepository())->getActiveBanner();
+$services   = (new ServiceRepository())->getActiveService();
+$settings   = (new SettingRepository())->getAll();
+
+$staffPhotos = [
+    $settings['staff_photo_1'] ?? 'washroom.jpeg',
+    $settings['staff_photo_2'] ?? 'sink.jpeg',
+    $settings['staff_photo_3'] ?? 'floors.jpeg',
+];
+
+
+
+
+// ── Templates ─────────────────────────────────────────────
 
 $tplBase = __DIR__ . '/../templates';
 

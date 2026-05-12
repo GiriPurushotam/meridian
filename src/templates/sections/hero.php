@@ -12,28 +12,7 @@
  */
 
 if (empty($banners)) {
-    $banners = [
-        [
-            'filename' => 'hero-banner.png',
-            'alt_text' => 'Meridian FMS professional cleaning team',
-        ],
-        [
-            'filename' => 'hero-2.png',
-            'alt_text' => 'Professional office cleaning services',
-        ],
-        [
-            'filename' => 'hero-3.png',
-            'alt_text' => 'Commercial gym cleaning',
-        ],
-        [
-            'filename' => 'hero-4.png',
-            'alt_text' => 'Restaurant and hospitality cleaning',
-        ],
-        [
-            'filename' => 'hero-5.png',
-            'alt_text' => 'School and childcare facility cleaning',
-        ],
-    ];
+    return;
 }
 ?>
 

@@ -1,3 +1,10 @@
+<?php
+
+/**
+ * @var array $staffPhotos staff photo filename from settings table
+ */
+?>
+
 <section id="why-choose-us">
     <div class="container">
 
@@ -84,22 +91,13 @@
             <div class="col-12 col-lg-5 reveal">
                 <div class="row g-2">
 
-                    <div class="col-4">
-                        <img src="/assets/images/washroom.jpeg"
-                            alt="Cleaning bathroom professionally"
-                            class="staff-photo">
-                    </div>
-                    <div class="col-4">
-                        <img src="/assets/images/sink.jpeg"
-                            alt="Window cleaning service"
-                            class="staff-photo">
-                    </div>
-                    <div class="col-4">
-                        <img src="/assets/images/floors.jpeg"
-                            alt="Vacuuming commercial space"
-                            class="staff-photo">
-                    </div>
+                    <?php foreach ($staffPhotos as $i => $photo): ?>
+                        <div class="col-4">
 
+                            <img src="/assets/images/<?= htmlspecialchars($photo) ?>" alt="Meridian FMS staff photo <?= $i + 1 ?>" class="staff-photo">
+                        </div>
+
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div><!-- End: row main -->
