@@ -5,8 +5,13 @@ declare(strict_types=1);
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../config/config.php';
 
+use Meridian\Content\ServiceRepository;
+
 $pageTitle = 'Services';
 $activePage = 'services';
+
+// Data
+$services = (new ServiceRepository())->getActiveService();
 
 $tplBase = __DIR__ . '/../templates';
 
