@@ -130,6 +130,18 @@
     transition: var(--transition);
  }
 
+ .stat-box {
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+.stat-box:hover {
+    background: rgba(255,255,255,0.14);
+    transform: translateY(-3px);
+}
  .btn-brand-outline:hover {
     background-color: var(--clr-white);
     color: var(--clr-navy);
@@ -138,7 +150,7 @@
  /* 5.Navbar --------------------------------------- */
 
  #main-navbar {
-    background-color: var(--clr-blue);
+    background-color: #002F5F;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     transition: box-shadow 0.3s ease;
@@ -473,6 +485,12 @@
  #main-footer a:hover {
     color: var(--clr-white);
  }
+
+ #main-footer span {
+    color: rgba(255,255,255,0.68);
+    display: block;
+    margin-bottom: 0.35rem;
+}
 
  .footer-divider {
     border-color: rgba(255,255,255,0.1);

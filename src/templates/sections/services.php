@@ -40,10 +40,7 @@ if (empty($services)) {
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title"><?= $service['title'] ?></h3>
                             <p class="card-text flex-grow-1"><?= htmlspecialchars($service['description']) ?></p>
-                            <div class="mt-3">
-                                <a href="/services/#<?= htmlspecialchars($service['slug']) ?>" class="text-blue fw-600 small"
-                                    style="font-weight: 600;">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
-                            </div>
+
                         </div>
                     </div>
 
