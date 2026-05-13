@@ -8,7 +8,7 @@
             <div class="col-12 col-md-4">
                 <img src="/assets/images/logo-full.png"
                     alt="Meridian FMS"
-                    style="height:60px; mix-blend-mode:screen; margin-bottom:0.75rem;"
+                    style="height:60px; background:#ffffff; border-radius:8px; padding:6px; margin-bottom:0.75rem;"
                     onerror="this.style.display='none'">
                 <p style="color:rgba(255,255,255,0.65); font-size:0.88rem; line-height:1.6;">
                     Professional cleaning and facility management
@@ -29,12 +29,12 @@
             <!-- Col 3: Services list -->
             <div class="col-6 col-md-3">
                 <h5>Our Services</h5>
-                <a href="/services#office">Office Cleaning</a>
-                <a href="/services#gym">Gym Cleaning</a>
-                <a href="/services#restaurant">Restaurant &amp; Pub</a>
-                <a href="/services#school">School &amp; Childcare</a>
-                <a href="/services#retail">Retail Store</a>
-                <a href="/services#public">Public Areas</a>
+                <span>Office Cleaning</span>
+                <span>Gym Cleaning</span>
+                <span>Restaurant &amp; Pub</span>
+                <span>School &amp; Childcare</span>
+                <span>Retail Store</span>
+                <span>Public Areas</span>
             </div>
 
             <!-- Col 4: Contact details -->
@@ -43,24 +43,26 @@
 
                 <p class="mb-1">
                     <i class="bi bi-telephone-fill me-2 text-green"></i>
-                    <a href="tel:+61494632063">+61 494 632 063</a>
+                    <a href="tel:<?= htmlspecialchars($settings['phone'] ?? '') ?>"><?= htmlspecialchars($settings['phone'] ?? '') ?></a>
                 </p>
 
                 <p class="mb-1">
                     <i class="bi bi-envelope-fill me-2 text-green"></i>
-                    <a href="mailto:Operations@meridianfms.com.au"
-                        style="word-break:break-word;">Operations@meridianfms.com.au</a>
+                    <a href="mailto:<?= htmlspecialchars($settings['email'] ?? '') ?>"
+                        style="word-break:break-word;"><?= htmlspecialchars($settings['email'] ?? '') ?></a>
                 </p>
 
                 <p class="mb-1">
                     <i class="bi bi-geo-alt-fill me-2 text-green"></i>
-                    U29/23 Barwon St,<br>
-                    Murrumba Downs QLD 4503
+                    <?= nl2br(htmlspecialchars($settings['address'] ?? '')) ?>
                 </p>
 
                 <!-- Social icons — links to be added when client provides them -->
                 <div class="d-flex gap-2 mt-3">
-                    <a href="#" aria-label="Facebook"
+                    <a href="https://www.facebook.com/profile.php?id=61574365701468"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
                         style="width:34px;height:34px;background:rgba(255,255,255,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;">
                         <i class="bi bi-facebook" style="color:rgba(255,255,255,0.7);"></i>
                     </a>
@@ -68,7 +70,10 @@
                         style="width:34px;height:34px;background:rgba(255,255,255,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;">
                         <i class="bi bi-instagram" style="color:rgba(255,255,255,0.7);"></i>
                     </a>
-                    <a href="#" aria-label="LinkedIn"
+                    <a href="https://www.linkedin.com/in/meridian-facility-management-37b1163bb/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
                         style="width:34px;height:34px;background:rgba(255,255,255,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;">
                         <i class="bi bi-linkedin" style="color:rgba(255,255,255,0.7);"></i>
                     </a>
