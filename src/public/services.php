@@ -6,12 +6,14 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../config/config.php';
 
 use Meridian\Content\ServiceRepository;
+use Meridian\Content\SettingRepository;
 
 $pageTitle = 'Services';
 $activePage = 'services';
 
 // Data
 $services = (new ServiceRepository())->getActiveService();
+$settings = (new SettingRepository())->getAll();
 
 $tplBase = __DIR__ . '/../templates';
 
