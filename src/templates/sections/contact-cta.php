@@ -14,11 +14,11 @@
 
             <!-- Quick contact details inline -->
             <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-4 mt-3">
-                <a href="tel:+61494632063"
+                <a href="tel:<?= preg_replace('/\s+/', '', $settings['phone'] ?? '') ?>"
                     style="color:rgba(255,255,255,0.9); font-weight:600; font-size:1rem;">
                     <i class="bi bi-telephone-fill me-2"></i><?= htmlspecialchars($settings['phone'] ?? '') ?>
                 </a>
-                <a href="mailto:Operations@meridianfms.com.au"
+                <a href="mailto:<?= htmlspecialchars($settings['email'] ?? '') ?>"
                     style="color:rgba(255,255,255,0.9); font-weight:600; font-size:1rem;">
                     <i class="bi bi-envelope-fill me-2"></i>Email Us
                 </a>

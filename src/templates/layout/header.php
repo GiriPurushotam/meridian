@@ -27,6 +27,11 @@
     <!-- ── Our custom CSS ────────────────────────────────── -->
     <link rel="stylesheet" href="/assets/css/main.css">
 
+    <!-- Page-specific CSS — set $extraCss in the page controller -->
+    <?php if (!empty($extraCss)): ?>
+        <link rel="stylesheet" href="<?= htmlspecialchars($extraCss) ?>">
+    <?php endif; ?>
+
     <!-- Favicon placeholder — replace with real icon later -->
     <link rel="icon" type="image/png" href="/assets/images/logo-icon.png">
 </head>

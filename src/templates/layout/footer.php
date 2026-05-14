@@ -43,7 +43,7 @@
 
                 <p class="mb-1">
                     <i class="bi bi-telephone-fill me-2 text-green"></i>
-                    <a href="tel:<?= htmlspecialchars($settings['phone'] ?? '') ?>"><?= htmlspecialchars($settings['phone'] ?? '') ?></a>
+                    <a href="tel:<?= preg_replace('/\s+/', '', $settings['phone'] ?? '') ?>"><?= htmlspecialchars($settings['phone'] ?? '') ?></a>
                 </p>
 
                 <p class="mb-1">
@@ -66,10 +66,10 @@
                         style="width:34px;height:34px;background:rgba(255,255,255,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;">
                         <i class="bi bi-facebook" style="color:rgba(255,255,255,0.7);"></i>
                     </a>
-                    <a href="#" aria-label="Instagram"
+                    <!-- <a href="#" aria-label="Instagram"
                         style="width:34px;height:34px;background:rgba(255,255,255,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;">
                         <i class="bi bi-instagram" style="color:rgba(255,255,255,0.7);"></i>
-                    </a>
+                    </a> -->
                     <a href="https://www.linkedin.com/in/meridian-facility-management-37b1163bb/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -103,6 +103,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <!-- ── Our custom script ──────────────────────────────────── -->
 <script src="/assets/js/main.js"></script>
+
+
+<!-- Page-specific JS — set $extraJs in the page controller -->
+<?php if (!empty($extraJs)): ?>
+    <script src="<?= htmlspecialchars($extraJs) ?>"></script>
+<?php endif; ?>
 
 </body>
 

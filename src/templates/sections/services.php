@@ -51,8 +51,8 @@ if (empty($services)) {
         <!-- Bottom CTA -->
 
         <div class="text-center mt-5 reveal">
-            <a href="/services" class="btn-brand-primary" style="display:inline-block;">
-                View All Services <i class="bi bi-arrow-right ms-2"></i>
+            <a href="/contact" class="btn-brand-primary" style="display:inline-block;">
+                Get a Free Quote <i class="bi bi-arrow-right ms-2"></i>
             </a>
         </div>
 

@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
+namespace Meridian\Content;
+
 use Meridian\Database;
+use PDO;
 
 class MessageRepository
 {
