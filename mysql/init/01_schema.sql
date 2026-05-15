@@ -20,6 +20,12 @@ VALUES ('phone', '+61 494 632 063'),
     ('staff_photo_1', 'washroom.jpeg'),
     ('staff_photo_2', 'sink.jpeg'),
     ('staff_photo_3', 'floors.jpeg');
+-- Admin password (default: change immediately after first login)
+INSERT INTO settings (`key`, `value`)
+VALUES (
+        'admin_pass',
+        '$2y$12$eWaNlH0tJyOOuaSjbWTkC.aaPfaYV0Q9BhCrY2y.kxTCpLMmq6Y0S'
+    );
 -- 2. Banners (hero carousel slides)
 CREATE TABLE IF NOT EXISTS banners (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
