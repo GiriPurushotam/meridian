@@ -69,7 +69,10 @@ function old(string $key, array $old): string
                     </div>
                     <div class="info-card__body">
                         <h3 class="info-card__label">Email</h3>
-                        <a href="mailto:<?= htmlspecialchars($email) ?>" class="info-card__value">
+                        <a href="https://mail.google.com/mail/?view=cm&to=<?= rawurlencode($email) ?>"
+                            target="_blank"
+                            rel="noopener"
+                            class="info-card__value">
                             <?= htmlspecialchars($email) ?>
                         </a>
                     </div>

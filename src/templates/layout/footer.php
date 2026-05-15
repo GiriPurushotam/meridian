@@ -48,7 +48,9 @@
 
                 <p class="mb-1">
                     <i class="bi bi-envelope-fill me-2 text-green"></i>
-                    <a href="mailto:<?= htmlspecialchars($settings['email'] ?? '') ?>"
+                    <a href="https://mail.google.com/mail/?view=cm&to=<?= rawurlencode($settings['email'] ?? '') ?>"
+                        target="_blank"
+                        rel="noopener"
                         style="word-break:break-word;"><?= htmlspecialchars($settings['email'] ?? '') ?></a>
                 </p>
 

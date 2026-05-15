@@ -18,7 +18,9 @@
                     style="color:rgba(255,255,255,0.9); font-weight:600; font-size:1rem;">
                     <i class="bi bi-telephone-fill me-2"></i><?= htmlspecialchars($settings['phone'] ?? '') ?>
                 </a>
-                <a href="mailto:<?= htmlspecialchars($settings['email'] ?? '') ?>"
+                <a href="https://mail.google.com/mail/?view=cm&to=<?= rawurlencode($settings['email'] ?? '') ?>"
+                    target="_blank"
+                    rel="noopener"
                     style="color:rgba(255,255,255,0.9); font-weight:600; font-size:1rem;">
                     <i class="bi bi-envelope-fill me-2"></i>Email Us
                 </a>
