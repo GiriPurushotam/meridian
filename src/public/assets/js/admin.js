@@ -122,3 +122,116 @@
     initImagePreview();
   });
 })();
+
+// Message Js ---------------------------------------------------
+
+(function () {
+  "use strict";
+
+  const table = document.getElementById("messagesTable");
+  if (!table) return;
+
+  table.addEventListener("click", function (e) {
+    // Ignore clicks inside action buttons / forms
+    if (e.target.closest("form") || e.target.closest("a")) return;
+
+    const summaryRow = e.target.closest(".msg-row");
+    if (!summaryRow) return;
+
+    const id = summaryRow.dataset.id;
+    const detailRow = document.getElementById("detail-" + id);
+    if (!detailRow) return;
+
+    const isOpen = !detailRow.classList.contains("d-none");
+
+    // Collapse all other open rows first
+    table.querySelectorAll(".msg-detail-row").forEach(function (dr) {
+      dr.classList.add("d-none");
+    });
+    table.querySelectorAll(".msg-row").forEach(function (r) {
+      r.classList.remove("msg-row--open");
+      r.setAttribute("aria-expanded", "false");
+    });
+
+    if (!isOpen) {
+      detailRow.classList.remove("d-none");
+      summaryRow.classList.add("msg-row--open");
+      summaryRow.setAttribute("aria-expanded", "true");
+
+      // Auto mark as read via fetch (fire-and-forget)
+      if (summaryRow.classList.contains("msg-unread")) {
+        markRead(id, summaryRow);
+      }
+    }
+  });
+
+  /**
+   * AJAX mark-as-read so the page doesn't reload on expand.
+   * Falls back gracefully if fetch isn't available.
+   */
+  function markRead(id, row) {
+    var formData = new FormData();
+    formData.append("id", id);
+    formData.append("action", "mark_read");
+
+    fetch("messages.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then(function () {
+        // Update UI without reload
+        row.classList.remove("msg-unread");
+
+        // Remove the unread dot in the first cell
+        var dot = row.querySelector(".msg-dot");
+        if (dot) dot.remove();
+
+        // Remove bold from cells
+        row.querySelectorAll("td").forEach(function (td) {
+          td.style.fontWeight = "";
+        });
+
+        // Flip the mark toggle button text inside the detail panel
+        var detailRow = document.getElementById("detail-" + id);
+        var toggleBtn = detailRow
+          ? detailRow.querySelector('[name="action"]')
+          : null;
+        var toggleIcon = detailRow
+          ? detailRow.querySelector(".bi-check2-circle, .bi-circle")
+          : null;
+        if (toggleBtn) toggleBtn.value = "mark_unread";
+        if (toggleIcon) {
+          toggleIcon.classList.replace("bi-check2-circle", "bi-circle");
+          var btnEl = toggleIcon.closest("button");
+          if (btnEl)
+            btnEl.innerHTML = '<i class="bi bi-circle me-1"></i>Mark as unread';
+        }
+
+        // Decrement the badge in the sidebar
+        var badge = document.querySelector(".admin-sidebar .badge");
+        if (badge) {
+          var count = parseInt(badge.textContent, 10) - 1;
+          if (count <= 0) {
+            badge.remove();
+          } else {
+            badge.textContent = count;
+          }
+        }
+
+        // Also update the page-level unread count line
+        var pageUnread = document.querySelector(".admin-page-sub .badge");
+        if (pageUnread) {
+          var pc = parseInt(pageUnread.textContent, 10) - 1;
+          if (pc <= 0) {
+            pageUnread.parentElement.innerHTML =
+              '<span class="text-muted">All caught up — no unread messages.</span>';
+          } else {
+            pageUnread.textContent = pc + " unread";
+          }
+        }
+      })
+      .catch(function () {
+        // Silent fail — next page load will reflect correct state
+      });
+  }
+})();

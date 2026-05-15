@@ -48,10 +48,10 @@ class MessageRepository
      * marked a single message as read
      */
 
-    public function markRead(int $id): bool
+    public function markRead(int $id, bool $read = true): bool
     {
-        $stmt = $this->pdo->prepare('UPDATE messages SET is_read = 1 WHERE id = :id');
-        return $stmt->execute([':id' => $id]);
+        $stmt = $this->pdo->prepare('UPDATE messages SET is_read = :read WHERE id = :id');
+        return $stmt->execute([':read' => (int) $read, ':id' => $id]);
     }
 
     /**
@@ -61,5 +61,15 @@ class MessageRepository
     public function countUnread(): int
     {
         return (int) $this->pdo->query('SELECT COUNT(*) FROM messages WHERE is_read = 0')->fetchColumn();
+    }
+
+    /**
+     * delete a message from id
+     */
+
+    public function delete(int $id): void
+    {
+        $stmt = $this->pdo->prepare('DELETE FROM messages WHERE id = :id');
+        $stmt->execute([':id' => $id]);
     }
 }
