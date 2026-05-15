@@ -58,8 +58,8 @@ class MessageRepository
      * count undread messages (used for admin badge)
      */
 
-    public function countRead(): int
+    public function countUnread(): int
     {
-        return (int) $this->pdo->query('SELECT COUNT(*) FROM messages WhERE is_read = 0')->fetchColumn();
+        return (int) $this->pdo->query('SELECT COUNT(*) FROM messages WHERE is_read = 0')->fetchColumn();
     }
 }
