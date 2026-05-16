@@ -14,6 +14,10 @@ RUN apt-get update && apt-get install -y \
 # mbstring  = safe string handling
 RUN docker-php-ext-install pdo_mysql mbstring
 
+# PHP upload limits
+RUN printf "upload_max_filesize=10M\npost_max_size=12M\n" \
+    > /usr/local/etc/php/conf.d/uploads.ini
+
 # Enable clean URLs
 RUN a2enmod rewrite
 
