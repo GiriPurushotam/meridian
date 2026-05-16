@@ -235,3 +235,36 @@
       });
   }
 })();
+
+/* ═══════════════════════════════════════════════
+   BANNERS PAGE — image preview before upload (Step 7F)
+   Append to src/public/assets/js/admin.js
+   (outside and below your existing IIFEs)
+   ═══════════════════════════════════════════════ */
+
+(function () {
+  "use strict";
+
+  // Live preview for any file input with data-preview="<img-id>"
+  document.addEventListener("change", function (e) {
+    const input = e.target;
+    if (input.type !== "file" || !input.dataset.preview) return;
+
+    const preview = document.getElementById(input.dataset.preview);
+    if (!preview) return;
+
+    const file = input.files[0];
+    if (!file) {
+      preview.classList.add("d-none");
+      preview.src = "#";
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (ev) {
+      preview.src = ev.target.result;
+      preview.classList.remove("d-none");
+    };
+    reader.readAsDataURL(file);
+  });
+})();
