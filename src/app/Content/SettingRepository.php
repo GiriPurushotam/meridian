@@ -20,4 +20,15 @@ class SettingRepository
         $all = $this->getAll();
         return $all[$key] ?? $default;
     }
+
+    public function set(string $key, string $value): void
+    {
+        $pdo = Database::getInstance()->getConnection();
+        $stmt = $pdo->prepare('INSERT INTO settings (`key`, `value`) VALUES (:key, :value) ON DUPLICATE KEY UPDATE `value` = :value2');
+        $stmt->execute([
+            ':key'      => $key,
+            ':value'    => $value,
+            ':value2'   => $value,
+        ]);
+    }
 }
