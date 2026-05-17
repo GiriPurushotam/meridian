@@ -31,4 +31,18 @@ class ServiceRepository
 
         return $services;
     }
+
+    public function getAll(): array
+    {
+        $pdo = Database::getInstance()->getConnection();
+        $stmt = $pdo->query('SELECT id, title, slug, image, sort_order FROM services ORDER BY sort_order ASC');
+        return $stmt->fetchAll();
+    }
+
+    public function updateImage(int $id, string $image): void
+    {
+        $pdo = Database::getInstance()->getConnection();
+        $stmt = $pdo->prepare('UPDATE services SET image = :image WHERE id = :id');
+        $stmt->execute([':image' => $image, ':id' => $id]);
+    }
 }
