@@ -24,7 +24,7 @@
 
             <!-- Col Left: Feature List ------------------------------------- | -->
 
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-6">
 
                 <!-- Feature items ------------------------------------------ | -->
 
@@ -88,7 +88,7 @@
 
             <!-- Col right: Staff Photos -->
 
-            <div class="col-12 col-lg-5 reveal">
+            <div class="col-12 col-lg-6 reveal">
                 <div class="row g-2">
 
                     <?php foreach ($staffPhotos as $i => $photo): ?>
