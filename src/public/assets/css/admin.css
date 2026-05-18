@@ -669,3 +669,34 @@ body.admin-login {
     border-radius: 4px;
     border: 1px solid #dee2e6;
 }
+
+/* ═══════════════════════════════════════════════
+   STAFF PHOTOS PAGE  (Step 7H)
+   Append to src/public/assets/css/admin.css
+   ═══════════════════════════════════════════════ */
+
+/* ── Portrait thumbnail wrapper ─────────────── */
+.staff-thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;   /* portrait ratio matches public site display */
+    background: #e9f0f8;
+    overflow: hidden;
+}
+.staff-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* ── Preview before upload ───────────────────── */
+.staff-preview {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
