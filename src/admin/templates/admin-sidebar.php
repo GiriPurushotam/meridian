@@ -15,7 +15,8 @@
     <!-- Brand -->
     <div class="sidebar-brand">
         <a href="/admin/dashboard.php">
-            <img src="/assets/images/logo-full.png" alt="Meridian FMS">
+            <img src="/assets/images/logo-full.png" alt="Meridian FMS" style="height:48px; background:#ffffff; border-radius:8px; padding:6px;"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
         </a>
     </div>
 

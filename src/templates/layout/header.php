@@ -33,7 +33,7 @@
     <?php endif; ?>
 
     <!-- Favicon placeholder — replace with real icon later -->
-    <link rel="icon" type="image/png" href="/assets/images/logo-icon.png">
+    <link rel="icon" type="image/png" href="/assets/images/main-logo.png">
 </head>
 
 <body>
@@ -50,15 +50,15 @@
             <!-- ── Logo ──────────────────────────────────────── -->
 
             <a class="navbar-brand d-flex align-items-center gap-2" href="/">
-                <img src="/assets/images/logo-icon.png"
+                <img src="/assets/images/logo-full.png"
                     alt="Meridian FMS"
+                    style="height:48px; background:#ffffff; border-radius:8px; padding:6px;"
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
                 <span style="display:none;">
                     <span class="text-white fw-bold">MERIDIAN</span><br>
                     <small style="font-size:0.65rem; color: rgba(255,255,255,0.6); letter-spacing:0.08em; text-transform:uppercase;">Facility Management</small>
                 </span>
             </a>
-
             <!-- ── Hamburger toggle (mobile) ─────────────────── -->
             <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse"
