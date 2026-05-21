@@ -6,7 +6,7 @@ A full-stack php application built for **meridian facility management services**
 
 ---
 
-## Tech Stack
+### Tech Stack
 
 - **Backend:** PHP 8.2, PDO, PSR-4 autoloading, Composer
 - **Frontend:** Bootstrap 5.3, DM Sans, playfair display
@@ -18,9 +18,9 @@ A full-stack php application built for **meridian facility management services**
 
 ---
 
-## Features
+### Features
 
-## Public Site
+### Public Site
 
 - Responsive multi-page website (Home, Services, About, Contact)
 - Dynamic hero banner carousel (DB-driven)
@@ -29,7 +29,7 @@ A full-stack php application built for **meridian facility management services**
 - SEO optimized - meta tags, Open Graph, Local Business schema, sitemap.xml
 - Google Search Console verified and submitted
 
-## Admin Panel
+### Admin Panel
 
 - Secure login with bcrypt password hashing
 - Session-based authentication with session regeneration
@@ -41,7 +41,7 @@ A full-stack php application built for **meridian facility management services**
 - Site settings editor (phone, email, address)
 - Change password page
 
-## Security
+### Security
 
 - CSRF tokens on all forms
 - PDO prepated statements (SQL injection protected)
@@ -54,49 +54,43 @@ A full-stack php application built for **meridian facility management services**
 
 ## Project Structure
 
+```
 meridian/
 ├── docker-compose.yml
 ├── docker/php/Dockerfile
 ├── src/
-│ ├── public/ ← document root
-│ │ ├── index.php
-│ │ ├── services.php
-│ │ ├── about.php
-│ │ ├── contact.php
-│ │ ├── sitemap.xml
-│ │ ├── robots.txt
-│ │ ├── .htaccess
-│ │ ├── assets/
-│ │ │ ├── css/
-│ │ │ ├── js/
-│ │ │ └── images/
-│ │ └── admin/ ← protected admin controllers
-│ ├── templates/
-│ │ ├── layout/ ← header.php, footer.php
-│ │ └── sections/ ← reusable page sections
-│ ├── admin/templates/ ← admin layout templates
-│ ├── app/
-│ │ ├── Database.php
-│ │ ├── Content/ ← Repository pattern
-│ │ │ ├── BannerRepository.php
-│ │ │ ├── ServiceRepository.php
-│ │ │ ├── SettingRepository.php
-│ │ │ └── MessageRepository.php
-│ │ └── Mail/
-│ │ └── Mailer.php
-│ └── config/config.php
+│   ├── public/              ← document root
+│   │   ├── index.php
+│   │   ├── services.php
+│   │   ├── about.php
+│   │   ├── contact.php
+│   │   ├── sitemap.xml
+│   │   ├── robots.txt
+│   │   ├── assets/css/
+│   │   ├── assets/js/
+│   │   ├── assets/images/
+│   │   └── admin/
+│   ├── templates/layout/
+│   ├── templates/sections/
+│   ├── admin/templates/
+│   ├── app/
+│   │   ├── Database.php
+│   │   ├── Content/
+│   │   └── Mail/
+│   └── config/config.php
 └── mysql/init/01_schema.sql
+```
 
---
+---
 
-## Local Development Setup
+### Local Development Setup
 
-## Requirements
+### Requirements
 
 - Docker Desktop
 - VS Code
 
-## Steps
+### Steps
 
 ```bash
 # Clone the repo
@@ -114,11 +108,11 @@ docker-compose up -d --build
 docker exec -it meridian-php composer install
 ```
 
-Visit `http://localhost:8080 for the site and `http://localhost:8081` for PhpMyAdmin.
+Visit `http://localhost:8080` for the site and `http://localhost:8081` for PhpMyAdmin.
 
 ---
 
-## Archetecture
+### Archetecture
 
 - **Repository pattern** - all DB queries live in `src/app/Content`, never in page controllers
 - **Template System** - shared header/footer with per-page `$extraCss` and `$extraJs` slots
@@ -127,7 +121,7 @@ Visit `http://localhost:8080 for the site and `http://localhost:8081` for PhpMyA
 
 ---
 
-## Developer
+### Developer
 
 Built by **Giri Purushotam**
 
