@@ -8,8 +8,10 @@ require_once __DIR__ . '/../config/config.php';
 use Meridian\Content\ServiceRepository;
 use Meridian\Content\SettingRepository;
 
-$pageTitle = 'Services';
-$activePage = 'services';
+$pageTitle       = 'Our Cleaning Services';
+$activePage      = 'services';
+$metaDescription = 'Explore Meridian FMS cleaning services — office, gym, restaurant, school, retail and public area cleaning across South East Queensland.';
+$canonicalPath   = '/services';
 
 // Data
 $services = (new ServiceRepository())->getActiveService();

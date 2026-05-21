@@ -9,8 +9,10 @@ use Meridian\Content\BannerRepository;
 use Meridian\Content\ServiceRepository;
 use Meridian\Content\SettingRepository;
 
-$pageTitle  = 'Home';
-$activePage = 'home';
+$pageTitle       = 'Commercial Cleaning Services South East Queensland';
+$metaDescription = 'Meridian FMS delivers professional commercial cleaning for offices, gyms, restaurants, schools and retail across South East Queensland. Get a free quote today.';
+$canonicalPath   = '/';
+$activePage      = 'home';
 
 $banners    = (new BannerRepository())->getActiveBanner();
 $services   = (new ServiceRepository())->getActiveService();

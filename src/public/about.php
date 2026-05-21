@@ -7,7 +7,9 @@ require_once __DIR__ . '/../config/config.php';
 
 use Meridian\Content\SettingRepository;
 
-$pageTitle = 'About';
+$pageTitle       = 'About Meridian FMS';
+$metaDescription = 'Learn about Meridian Facility Management Services — a trusted commercial cleaning company serving South East Queensland businesses.';
+$canonicalPath   = '/about';
 $activePage = 'about';
 
 $settings = (new SettingRepository())->getAll();

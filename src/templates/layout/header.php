@@ -5,10 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO basics — page-specific title set by each page -->
 
+    <!-- ── SEO ───────────────────────────────────────────── -->
     <title><?= htmlspecialchars($pageTitle ?? 'Meridian Facility Management Services') ?> | Meridian FMS</title>
-    <meta name="description" content="Meridian Facility Management Services — professional commercial cleaning for offices, gyms, restaurants, school and more across South East Queensland.">
+    <meta name="description" content="<?= htmlspecialchars($metaDescription ?? 'Meridian Facility Management Services — professional commercial cleaning for offices, gyms, restaurants, schools and more across South East Queensland.') ?>">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://meridianfms.com.au<?= htmlspecialchars($canonicalPath ?? '/') ?>">
+
+    <!-- ── Open Graph (Facebook / LinkedIn sharing) ──────── -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Meridian FMS">
+    <meta property="og:title" content="<?= htmlspecialchars($pageTitle ?? 'Meridian Facility Management Services') ?> | Meridian FMS">
+    <meta property="og:description" content="<?= htmlspecialchars($metaDescription ?? 'Professional commercial cleaning across South East Queensland.') ?>">
+    <meta property="og:url" content="https://meridianfms.com.au<?= htmlspecialchars($canonicalPath ?? '/') ?>">
+    <meta property="og:image" content="https://meridianfms.com.au/assets/images/hero-banner.png">
 
     <!-- ── Google Fonts ──────────────────────────────────── -->
 
@@ -34,6 +44,42 @@
 
     <!-- Favicon placeholder — replace with real icon later -->
     <link rel="icon" type="image/png" href="/assets/images/main-logo.png">
+
+    <!-- ── Local Business Schema — helps Google show rich results ── -->
+    <?php if (($activePage ?? '') === 'home'): ?>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Meridian Facility Management Services",
+                "image": "https://meridianfms.com.au/assets/images/logo-full.png",
+                "url": "https://meridianfms.com.au",
+                "telephone": "+61494632063",
+                "email": "Operations@meridianfms.com.au",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "U29/23 Barwon St",
+                    "addressLocality": "Murrumba Downs",
+                    "addressRegion": "QLD",
+                    "postalCode": "4503",
+                    "addressCountry": "AU"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": -27.2469,
+                    "longitude": 152.9864
+                },
+                "areaServed": "South East Queensland",
+                "description": "Professional commercial cleaning services for offices, gyms, restaurants, schools and retail across South East Queensland.",
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "07:00",
+                    "closes": "18:00"
+                }
+            }
+        </script>
+    <?php endif; ?>
 </head>
 
 <body>

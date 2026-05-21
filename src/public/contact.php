@@ -96,8 +96,9 @@ if ($formStatus === null && isset($_GET['status'])) {
 
 $settings = (new SettingRepository())->getAll();
 
-$pageTitle = 'Contact Us  — Meridian FMS';
-$activePage = 'contact';
+$pageTitle       = 'Get a Free Quote';
+$metaDescription = 'Contact Meridian FMS for a free commercial cleaning quote. Serving South East Queensland. Call +61 494 632 063 or send us a message.';
+$canonicalPath   = '/contact';
 $extraCss = '/assets/css/contact.css';
 $extraJs = '/assets/js/contact.js';
 
