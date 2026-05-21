@@ -1,4 +1,5 @@
 .env
+.env.production
 src/vendor/
 node_modules/
 
