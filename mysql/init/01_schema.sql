@@ -1,8 +1,7 @@
 -- -------
 -- Meridian FMS - Database schema + seed data 
 -- -------
-USE meridian_db;
--- 1. settings (key/value store for side-wide config)
+-- 1. settings (key/value store for site-wide config)
 CREATE TABLE IF NOT EXISTS settings (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     `key` VARCHAR(100) NOT NULL UNIQUE,
